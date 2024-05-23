@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 2.0em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  max-width: 1860px;
+  height: 1000px;
+  margin: 25px auto;
+  overflow: hidden;
+  background: linear-gradient(-40deg, #4d1c97, #000000);
+  background-repeat: no-repeat;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px; 
+}
+ul.main-menu {
+  margin: 0;
+  padding: 2;
+  list-style: none;
+}
+ul.main-menu a {
+  display: inline-block;
+  padding: 5px; 
+  margin-right: 10px; 
+  font-size: 6rem;
+  color: #666666;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+}
+ul.main-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  border-radius: 20px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #4d1c97;
+  transition: width 0.4s ease-in-out;
+}
+ul.main-menu a:hover::after,
+ul.main-menu a:focus::after,
+ul.main-menu a.active::after {
+  width: 100%;
+  right: 0;
+}
+ul.main-menu a:hover {
+  color: #ffffff;
+}
+
+ul.main-menu a:hover::after,
+ul.main-menu a:focus::after,
+ul.main-menu a:focus::after {
+  width: 100%;
+}
+
+ul.main-menu a:hover,
+ul.main-menu a:focus,
+ul.main-menu a.active {
+  color: #ffffff;
+}
+#container {
+  border-radius: 60px;
+  background-color: #00000075;
+  padding: 20px; 
+  margin-left: 10px;
+  margin-top: -600px;
+  max-width: 1200px;
+  max-height: 300px;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+.content-region {
+  padding: 30px; 
+  display: none;
+}
+.content-region.show {
+  display: block;
+}
